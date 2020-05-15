@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# install latest stable version of Node.js (https://nodejs.org/en/)
+sudo apt install nodejs
+node --version
+echo "Node.js installation complete."
+
+# install npm (node package manager)
+sudo apt install npm
+npm -v
+echo "npm installation complete."
+
+# configure git - this helps github know who is responsible for commits to our shared responsible
+git config --global user.name $1
+git config --global user.email $2
+echo "git configured with username '" $1 "' and email '" $2 "'"
+
+# install vim and set git editor to vim
+sudo apt-get install vim
+git config --global core.editor vim
+echo "script complete"
+
