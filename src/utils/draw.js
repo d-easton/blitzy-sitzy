@@ -10,3 +10,5 @@ import cards from '../assets/cards/card-library.js'
 function draw () {
     return cards[ (Math.random()*cards.length) ];
 }
+
+export default draw;
