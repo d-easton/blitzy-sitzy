@@ -9,3 +9,5 @@ cards = [
     "Skip your next turn",
     "Move a random player back two spaces",
 ];
+
+export default cards;
