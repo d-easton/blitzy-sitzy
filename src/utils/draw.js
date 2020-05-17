@@ -1,4 +1,3 @@
-import React from 'react';
 import cards from '../assets/cards/card-library.js'
 
 /*
