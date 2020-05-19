@@ -40,10 +40,25 @@ We now know how props allow us to pass information and event signals up and down
 
 What happens, however, when we want that information to persist? Say we search a game like Fortnite using the `Search` component, which is parallel to `DisplayTable`. The search feature will reload the `DisplayTable` with all new information -- instead of all top streams, the table will display top streams of the given game. But while it's fine for `DisplayTable` to forget its previous streams, we want to remember the names of all blocked streamers. This pieces of state needs to be "lifted" from the place we first though would be most appropriate to `App`, the parent component that renders the `DisplayTable` component. State lifting is relatively common in React, especially when stateful information must be accessed or modified by two different features.
 
-If state sounds complicated, don't worry. You're not alone. We'll be using Redux to simplify the prop and state flow pattern a bit.
+If state sounds complicated, don't worry, it is. We'll be using Redux to simplify the prop and state flow pattern a bit.
+
+#### Learn More
+The React website offers a [tutorial](https://reactjs.org/tutorial/tutorial.html) for beginners and has great reference [docs](https://reactjs.org/docs/getting-started.html). for Here's another [guide](https://www.taniarascia.com/getting-started-with-react/) that does a decent job of explaining React in a narrative style.
 
 ## About Redux
-Redux is a state management tool that can be used with React. It uses abstraction to simplify the complex state and handler passing that is common with React components. In Redux, state is taken out of all components and managed by a distinct entity called `store`. Components can freely interact with store, modifiying chunks of state or accessing whatever information they need. Treating state like an API has clear conceptual advantages, but comes with the cost of a lot of boilerplate code, many additional files and jargon-heavy terms. Using Redux in a relatively small-scale app like this is arguably overkill, but Redux is widely used making this addition useful exposure and good practice with employing abstraction.
+Redux is a state management tool that can be used with React. It uses abstraction to simplify the complex state and handler passing that is common with React components. In Redux, state is taken out of all components and managed by a distinct entity called `store`. Components can freely interact with store, modifiying chunks of state or accessing whatever information they need. Treating state like an API has clear conceptual advantages, but comes with the cost of a lot of boilerplate code, many additional files and jargon-heavy terms. Using Redux in a relatively small-scale app like this is arguably overkill, but Redux is widely used and a helpful tool when applications need to scale up. Adding it to our project will provide you with useful exposure and a bit of practice with employing abstraction in your code.
 
-- Why use Redux?
-    - In React, information can only flow "downstream." This means t
+#### Redux Keywords
+Redux has some dense terminology. Here are the important concepts to know:
+- **Store:** This is the centralized storage of all state. State is encoded as an JSON tree. Conceptually, you can selectively access and modify different parts of the store object tree just as you might access or modify state in a React component.
+- **Actions:** Actions are instructions of how you want to modify state. You could define an action to `INCREMENT_COUNTER` or to `CHANGE_BOARD_POSITION` based on a die roll. We can't directly change state the way we do in standard React -- this process is abstracted into several steps, with an action being the first.
+- **Reducers:** A reducer is a special function that is responsible for the dirty work of handling state. Our components send actions to the reducer functions, which contain code that tells them how to translate a given action into an interaction with state. Reducers are the intermediary step between components and state.
+- **Dispatch:** To change the internal state inside store, components must send -- or *dispatch* an action to a reducer. `dispatch()` is a method belonging to `store` which takes actions as arguments.
+
+All together, the syntax looks something like this `store.dispatch( {INCREMENT_COUNTER} )`
+
+#### Learn More
+- Redux offers a [guide](https://redux.js.org/introduction/getting-started) that explains some of the mechanics. The code snippets on that page show the above items in action together. The Redux site also has great reference docs, but beginners may find them a bit confusing. For a more detailed conceptual walkthrough, you might want to check out this [video](https://www.youtube.com/watch?v=CVpUuw9XSjY)
+
+#### Redux Files
+I've grouped our Redux files in the directory `src/state/`. 
