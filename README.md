@@ -57,8 +57,11 @@ Redux has some dense terminology. Here are the important concepts to know:
 
 All together, the syntax looks something like this `store.dispatch( {INCREMENT_COUNTER} )`
 
+#### Redux Files
+I've grouped our Redux files in the directory `src/state/`.  Within that directory, the above concepts are sorted into self-titled directories. The only new addition is `constants` which defines our catalog of actions as `const` variables rather than strings, so that VS Code can help us catch typos. 
+
+Checkout the actions I have created so far and remind yourself that actions are how we manage state (the information that will change as our game is played). Can you make a list of what other actions we should create?
+
 #### Learn More
 - Redux offers a [guide](https://redux.js.org/introduction/getting-started) that explains some of the mechanics. The code snippets on that page show the above items in action together. The Redux site also has great reference docs, but beginners may find them a bit confusing. For a more detailed conceptual walkthrough, you might want to check out this [video](https://www.youtube.com/watch?v=CVpUuw9XSjY)
 
-#### Redux Files
-I've grouped our Redux files in the directory `src/state/`. 
