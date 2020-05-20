@@ -5,13 +5,16 @@ import './board.css';
 class Board extends Component {
     render() {
         const {activeNations} = this.props
-        activeNations.map((nation, index) => {
-            return (
-                <Track>{nation.ID}</Track> // ID and current space
-            )
-        })
+        return(
+        
+            activeNations.map((nation, index) => {
+                return (
+                    <Track>{nation.ID}</Track> // ID and current space
+                )
+            })
+        );
     }
     // generate tracks to represent each nation
 }
 
-export default board;
+export default Board;
