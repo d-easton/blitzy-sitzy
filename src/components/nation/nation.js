@@ -2,13 +2,27 @@ import React, {Component} from 'react';
 import './nation.css';
 
 class Nation extends Component {
-    // constructor(props, id) {
-    //     super(props);
+    constructor(props, id) {
+        super(props);
     //     this.isActive = true;
-    //     this.id = id;    // unique # or letter symbol refering to each of the four nations
-    //     // this.dieSize                // size of die -- should this be a parameter or determined by id?
+        this.id = this.props.id;    // unique # or letter symbol refering to each of the four nations
+        if(this.id == "DE"){
+            this.dieSize = 10;
+        }
+        else if(this.id == "GB"){
+            this.dieSize = 6;
+        }
+        else if(this.id == "FR") {
+            this.dieSize = 4;
+        }
+        else if(this.id == "RUS") {
+            this.dieSize = 8;
+        }
+        else{
+            this.dieSize = 0;
+        }
     //     this.location = Nation.startingSpace;
-    // }
+    }
 
     componenetDidMount(){
         
@@ -20,6 +34,9 @@ class Nation extends Component {
                 <h1>
                     {this.props.nationName}
                 </h1>
+                <h3>
+                    {this.dieSize}
+                </h3>
             </div>
         );
     };
