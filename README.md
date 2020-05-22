@@ -1,6 +1,17 @@
 # blitzy-sitzy
 Digital version of Sam Easton's Blitzy-Sitzy board game. Built with React
 
+##Todo:
+- [] Structure and style nation board with subcomponents (track, display info, action buttons)
+- [] Complete setup of Redux infrastructure
+- [] Implement game setup to select # players and which nations are active
+- [] Populate track with unique text
+- [] Add effect functionality
+- [] Map effect functionality to cards and rolls
+- [] Implement pawns
+- [] Set victory and endgame conditions
+- [] Add turn-based click restrictions 
+
 ## Setup Instructions for Sam
 1. After cloning this repo to your local machine, navigate into the blitzy-sitzy directory using the `cd` command.
 2. Type the following command to execute a script that will install node.js, npm, and configure your git setting:
