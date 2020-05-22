@@ -6,3 +6,5 @@ const rootReducer = combinedReducers({
     pawnReducer,
     nationSelectReducer
 });
+
+export default rootReducer;

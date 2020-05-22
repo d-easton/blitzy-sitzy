@@ -11,6 +11,8 @@ const nationSelectReducer = (state=initial, action) => {
             return state;
         case DEACTIVATE_NATION:
             return state;
+        default:
+            return state;
     }
     
 };
