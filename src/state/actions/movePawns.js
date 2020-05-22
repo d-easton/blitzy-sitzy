@@ -9,4 +9,4 @@ const movePawns = (payload) => {
     }
 }
 
-export default activateNation;
+export default movePawns;
