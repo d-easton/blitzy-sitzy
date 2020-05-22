@@ -1,7 +1,7 @@
 # blitzy-sitzy
 Digital version of Sam Easton's Blitzy-Sitzy board game. Built with React
 
-##Todo:
+## Todo:
 - [] Structure and style nation board with subcomponents (track, display info, action buttons)
 - [] Complete setup of Redux infrastructure
 - [] Implement game setup to select # players and which nations are active
