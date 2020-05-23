@@ -1,5 +1,6 @@
-import React from 'react';
+import Space from "./space";
 
+// todo: fix this
 spacesGermany = [];
 spacesRussia = [];
 spacesFrance = [];
