@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import './nation.css';
+import Pawn from "./components/pawn";
 
 class Nation extends Component {
     constructor(props, id) {
         super(props);
-    //     this.isActive = true;
         this.id = this.props.id;    // unique # or letter symbol refering to each of the four nations
+        this.vp = 0;
+
         if(this.id == "DE"){
             this.dieSize = 10;
         }
@@ -21,7 +23,6 @@ class Nation extends Component {
         else{
             this.dieSize = 0;
         }
-    //     this.location = Nation.startingSpace;
     }
 
     componenetDidMount(){
@@ -41,7 +42,5 @@ class Nation extends Component {
         );
     };
 };
-
-Nation.startingSpace = 0;
 
 export default Nation;
