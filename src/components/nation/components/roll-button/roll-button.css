@@ -1,0 +1,28 @@
+.button {
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%
+  }
+
+.DE {
+    background-color: lightslategray;
+}
+
+.FR {
+    background-color: lightskyblue;
+}
+
+.GB {
+    background-color: lightpink;
+}
+
+.RUS {
+    background-color: lightgreen;
+}
