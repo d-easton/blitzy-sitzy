@@ -2,7 +2,7 @@ import React from 'react';
 import './draw-button.css';
 
 const DrawButton = (props) => {
-    return <button class={props.nation}> D </button>;   // todo: check prop pass name
+    return <button id={props.nation}> D </button>;   // todo: check prop pass name
 }
 
-export default RollButton;
+export default DrawButton;

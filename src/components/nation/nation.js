@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import './nation.css';
 import Pawn from "./components/pawn";
+import roll from "../../utils/roll";
+import draw from "../../utils/draw";
+import DrawButton from "./components/draw-button";
+import RollButton from "./components/roll-button";
 
 class Nation extends Component {
     constructor(props, id) {
@@ -29,15 +33,26 @@ class Nation extends Component {
         
     }
 
+    handleClickRollButton = () => {
+        return roll(this.dieSize);
+    }
+
+    handleClickDrawButton = () => {
+        console.log(draw());
+        return;
+    }
+
     render() {
         return(
             <div id = {this.props.id}>
                 <h1>
                     {this.props.nationName}
                 </h1>
-                <h3>
+                {/* <h3>
                     {this.dieSize}
-                </h3>
+                </h3> */}
+                <RollButton class={this.id} dieSize={this.dieSize}></RollButton>
+                <DrawButton class={this.id} onclick={this.handleClickRollButton}></DrawButton>
             </div>
         );
     };
