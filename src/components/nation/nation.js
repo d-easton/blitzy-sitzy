@@ -51,7 +51,7 @@ class Nation extends Component {
                 {/* <h3>
                     {this.dieSize}
                 </h3> */}
-                <RollButton class={this.id} dieSize={this.dieSize}></RollButton>
+                <RollButton class={this.id} dieSize={this.dieSize} onClick></RollButton>
                 <DrawButton class={this.id} onclick={this.handleClickRollButton}></DrawButton>
             </div>
         );
