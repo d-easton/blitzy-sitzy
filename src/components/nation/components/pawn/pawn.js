@@ -15,7 +15,4 @@ class Pawn extends Component {
         );
     };
 };
-
-Nation.startingSpace = 0;
-
-export default Nation;
+export default Pawn;
