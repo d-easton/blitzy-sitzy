@@ -4,7 +4,7 @@
 
 import {ACTIVATE_NATION, DEACTIVATE_NATION} from "../constants/action-catalog";
 
-const nationSelectReducer = (state=initial, action) => {
+const nationSelectReducer = (state=0, action) => {
     switch(action.type){
         // TODO:
         case ACTIVATE_NATION:

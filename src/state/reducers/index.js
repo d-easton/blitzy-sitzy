@@ -1,8 +1,9 @@
 import pawnReducer from './pawn-reducer';
 import nationSelectReducer from './nation-select-reducer';
-import {combinedReducers} from 'redux';
+import nationReducer from './nation-reducer';
+import {combineReducers} from 'redux';
 
-const rootReducer = combinedReducers({
+const rootReducer = combineReducers({
     pawnReducer,
     nationSelectReducer
 });
