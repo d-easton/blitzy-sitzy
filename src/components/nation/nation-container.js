@@ -19,7 +19,7 @@ const NationContainer = (props) => {
     );   
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
         victoryPoints: state.nationReducer.nations[0].victory_points,
         pawns: state.pawns

@@ -18,7 +18,7 @@ class Nation extends Component {
     constructor(props) {
         super(props);
         this.id = this.props.id;    // unique # or letter symbol refering to each of the four nations
-        this.vp = this.props.victoryPoints;
+        //this.vp = this.props.victoryPoints;
         this.name = this.props.nationName;
 
         if(this.id == "DE"){
@@ -61,7 +61,7 @@ class Nation extends Component {
         return(
             <div id = {this.props.id}>
                 <h1>
-                    {this.name} -- VP: {this.vp} 
+                    {this.name} -- VP: {this.props.victoryPoints} 
                 </h1>
                 {/* <h3>
                     {this.dieSize}
