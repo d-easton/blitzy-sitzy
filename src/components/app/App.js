@@ -15,10 +15,10 @@ class App extends Component {
         <div className = "title-box">
           <h1>BlitzySitzy Game</h1>
         </div>
-        <Nation id="DE" nationName={"Germany"}>test</Nation>
-        <Nation id="GB" nationName={"Great Britain"}>test2</Nation>
-        <Nation id="RUS" nationName={"Russia"}>test3</Nation>
-        <Nation id="FR" nationName={"France"}>test4</Nation>
+        <Nation id="DE" isActive={true} nationName={"Germany"} />
+        <Nation id="GB" isActive={true} nationName={"Great Britain"} />
+        <Nation id="RUS" isActive={true} nationName={"Russia"} />
+        <Nation id="FR" isActive={false} nationName={"France"} />
       </div>
     );
   };

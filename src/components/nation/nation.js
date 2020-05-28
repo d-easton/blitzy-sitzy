@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {useSelector} from 'react-redux';
 import './nation.css';
 import Pawn from "./components/pawn";
 import roll from "../../utils/roll";
@@ -6,8 +7,13 @@ import draw from "../../utils/draw";
 import DrawButton from "./components/draw-button";
 import RollButton from "./components/roll-button";
 
+/*
+    Redux container component that handles state corresponding to one active nation. Displays relevant in-game info
+    and also works as a control pad for that nation.
+*/
+
 class Nation extends Component {
-    constructor(props, id) {
+    constructor(props) {
         super(props);
         this.id = this.props.id;    // unique # or letter symbol refering to each of the four nations
         this.vp = 0;
@@ -33,6 +39,7 @@ class Nation extends Component {
         
     }
 
+    // Interactive handlers
     handleClickRollButton = () => {
         return roll(this.dieSize);
     }
@@ -42,11 +49,15 @@ class Nation extends Component {
         return;
     }
 
+    // Output render
     render() {
+        // State selectors
+        //const victoryPoints = useSelector(state => state.victoryPoints);
+
         return(
             <div id = {this.props.id}>
                 <h1>
-                    {this.props.nationName}
+                    {this.props.nationName} -- VP: 
                 </h1>
                 {/* <h3>
                     {this.dieSize}
