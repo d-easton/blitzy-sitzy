@@ -4,9 +4,11 @@
 
 import {CHANGE_VP} from "../constants/action-catalog";
 
-const changeVP = (payload) => {
+const changeVP = (index, newVictoryPointAmount) => {   //payload
     return {
-        type: CHANGE_VP, payload
+        type: CHANGE_VP,    //payload
+        index,
+        newVictoryPointAmount
     }
 }
 

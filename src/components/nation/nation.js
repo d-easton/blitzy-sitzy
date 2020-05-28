@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import {useSelector} from 'react-redux';
+import {connect} from 'react-redux';
 import './nation.css';
-import Pawn from "./components/pawn";
 import roll from "../../utils/roll";
 import draw from "../../utils/draw";
+
+import Pawn from "./components/pawn";
 import DrawButton from "./components/draw-button";
 import RollButton from "./components/roll-button";
+
 
 /*
     Redux container component that handles state corresponding to one active nation. Displays relevant in-game info
@@ -16,7 +18,8 @@ class Nation extends Component {
     constructor(props) {
         super(props);
         this.id = this.props.id;    // unique # or letter symbol refering to each of the four nations
-        this.vp = 0;
+        this.vp = this.props.victoryPoints;
+        this.name = this.props.nationName;
 
         if(this.id == "DE"){
             this.dieSize = 10;
@@ -49,24 +52,26 @@ class Nation extends Component {
         return;
     }
 
+ 
     // Output render
     render() {
         // State selectors
         //const victoryPoints = useSelector(state => state.victoryPoints);
-
+        
         return(
             <div id = {this.props.id}>
                 <h1>
-                    {this.props.nationName} -- VP: 
+                    {this.name} -- VP: {this.vp} 
                 </h1>
                 {/* <h3>
                     {this.dieSize}
                 </h3> */}
                 <RollButton class={this.id} dieSize={this.dieSize} onClick></RollButton>
                 <DrawButton class={this.id} onclick={this.handleClickRollButton}></DrawButton>
+                <button onClick={this.props.handleUpdateVP}>Change Victory Points</button>
             </div>
         );
     };
 };
 
-export default Nation;
+export default (Nation);

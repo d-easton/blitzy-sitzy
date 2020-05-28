@@ -5,7 +5,9 @@ import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
     pawnReducer,
-    nationSelectReducer
+    nationSelectReducer,
+    nationReducer,
+    activeNations: [],
 });
 
 export default rootReducer;
