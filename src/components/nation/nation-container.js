@@ -19,9 +19,10 @@ const NationContainer = (props) => {
     );   
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
+    console.log("test props on state map "+props.index);
     return {
-        victoryPoints: state.nationReducer.nations[0].victory_points,
+        victoryPoints: state.nationReducer.nations[0].victory_points,       // needs to be something other than [0]
         pawns: state.pawns
     }
 }
