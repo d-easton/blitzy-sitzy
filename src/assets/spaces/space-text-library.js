@@ -1,9 +1,15 @@
 import Space from "./space";
 
 // todo: fix this
-spacesGermany = [];
-spacesRussia = [];
-spacesFrance = [];
-spaceBritain = [];
+const spacesGermany = ["Berlin", "Munich", "Hamburg"];
+const spacesRussia = ["Moscow", "St. Petersburg", "Tver"];
+const spacesFrance = ["Paris", "Lyon", "Toulouse"];
+const spacesBritain = ["London", "Bristol", "Manchester"];
 
-export default spaces;
+let Spaces = {
+    "DE":spacesGermany,
+    "GB":spacesBritain,
+    "RUS":spacesRussia,
+    "FR":spacesFrance
+}
+export default Spaces;

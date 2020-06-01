@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import './nation.css';
+
+import Spaces from "../../assets/spaces";
 import roll from "../../utils/roll";
 import draw from "../../utils/draw";
 
@@ -36,6 +38,8 @@ class Nation extends Component {
         else{
             this.dieSize = 0;
         }
+
+        this.spaces = Spaces[this.id];
     }
 
     componenetDidMount(){
@@ -51,7 +55,6 @@ class Nation extends Component {
         console.log(draw());
         return;
     }
-
  
     // Output render
     render() {
@@ -69,7 +72,7 @@ class Nation extends Component {
                 <RollButton class={this.id} dieSize={this.dieSize} onClick></RollButton>
                 <DrawButton class={this.id} onclick={this.handleClickRollButton}></DrawButton>
                 <button onClick={this.props.handleUpdateVP}>Change Victory Points</button>
-                <Track spaces={['x','y','z']}/>
+                <Track spaces={this.spaces}/>
             </div>
         );
     };
