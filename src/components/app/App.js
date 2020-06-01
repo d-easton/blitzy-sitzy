@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import * as utils from '../../utils';
-import board from "../board";
 import './app.css';
 import Nation from "../nation/index";
 
