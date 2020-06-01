@@ -16,11 +16,27 @@ const Track = props => {
         );
 
     */
+
+    /*
+        <li> a </li>
+        <li> b </li>
+        <li> c </li>
+
+            let durationBody = duration.map((item, i) => {
+      return (
+        <option key={i} value={item}>
+          {item}
+        </option>
+      );
+    });
+
+    */
+   
+    const trackBody = props.spaces.map((item, i) => <li key={i} value={item}>{item}</li>);
+
     return (
         <ul> 
-            <li> a </li>
-            <li> b </li>
-            <li> c </li>
+            {trackBody}
         </ul>
     );
 }

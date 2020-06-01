@@ -69,7 +69,7 @@ class Nation extends Component {
                 <RollButton class={this.id} dieSize={this.dieSize} onClick></RollButton>
                 <DrawButton class={this.id} onclick={this.handleClickRollButton}></DrawButton>
                 <button onClick={this.props.handleUpdateVP}>Change Victory Points</button>
-                <Track/>
+                <Track spaces={['x','y','z']}/>
             </div>
         );
     };
