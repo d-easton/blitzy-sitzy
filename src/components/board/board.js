@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Track from './track';
+//import Track from './track';
 import './board.css';
 
 class Board extends Component {
@@ -9,7 +9,7 @@ class Board extends Component {
         
             activeNations.map((nation, index) => {
                 return (
-                    <Track>{nation.ID}</Track> // ID and current space
+                   <h1>board</h1>
                 )
             })
         );

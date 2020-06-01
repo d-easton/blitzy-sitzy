@@ -5,9 +5,9 @@ import roll from "../../utils/roll";
 import draw from "../../utils/draw";
 
 import Pawn from "./components/pawn";
+import Track from "./components/track";
 import DrawButton from "./components/draw-button";
 import RollButton from "./components/roll-button";
-
 
 /*
     Redux container component that handles state corresponding to one active nation. Displays relevant in-game info
@@ -69,6 +69,7 @@ class Nation extends Component {
                 <RollButton class={this.id} dieSize={this.dieSize} onClick></RollButton>
                 <DrawButton class={this.id} onclick={this.handleClickRollButton}></DrawButton>
                 <button onClick={this.props.handleUpdateVP}>Change Victory Points</button>
+                <Track/>
             </div>
         );
     };
