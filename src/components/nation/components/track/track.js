@@ -1,6 +1,8 @@
 import React from 'react';
 import './track.css';
 
+import Space from "../space";
+
 const Track = props => {
     /*
     maybe incorporate from board?

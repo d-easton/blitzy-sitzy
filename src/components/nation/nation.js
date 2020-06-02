@@ -39,7 +39,7 @@ class Nation extends Component {
             this.dieSize = 0;
         }
 
-        this.spaces = Spaces[this.id];
+        this.spaces = Spaces["DE"]; // this.id
     }
 
     componenetDidMount(){
@@ -72,7 +72,7 @@ class Nation extends Component {
                 <RollButton class={this.id} dieSize={this.dieSize} onClick></RollButton>
                 <DrawButton class={this.id} onclick={this.handleClickRollButton}></DrawButton>
                 <button onClick={this.props.handleUpdateVP}>Change Victory Points</button>
-                <Track spaces={this.spaces}/>
+                <Track spaces={this.spaces.map(x => x.text)}/>
             </div>
         );
     };
