@@ -34,7 +34,7 @@ const Track = props => {
 
     */
    
-    const trackBody = props.spaces.map((item, i) => <li key={i} value={item}>{item}</li>);
+    const trackBody = props.spaces.map((item) =><li>{item}</li>); //    , i    <li key={i} value={item}
 
     return (
         <ul> 

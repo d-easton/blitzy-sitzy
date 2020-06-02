@@ -39,7 +39,7 @@ class Nation extends Component {
             this.dieSize = 0;
         }
 
-        this.spaces = Spaces["DE"]; // this.id
+        this.spaces = Spaces[this.id]; 
     }
 
     componenetDidMount(){

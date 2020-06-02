@@ -16,37 +16,30 @@ const DE1 = new Space(0, "Move forward one space", "Berlin", "DE");
 const DE2 = new Space(1, "Gain 2 victory points", "Hamburg", "DE");
 const DE3 = new Space(2, "Lose 1 victory point", "Munich", "DE");
 
-/*
-
-const DE1 = {id: 0, effect:"Move forward one space", text: "Berlin", nations: "DE"};
-const DE2 = {id: 1, effect:"Gain 2 victory points", text: "Hamburg", nations: "DE"};
-const DE3 = {id: 2, effect:"Lose 1 victory point", text: "Munich", nations: "DE"};
-
-
 // Great Britain spaces
-const GB1 = {id: 3, effect:"Move forward one space", text: "London", nations: "GB"};
-const GB2 = {id: 4, effect:"Gain 2 victory points", text: "Bristol", nations: "GB"};
-const GB3 = {id: 5, effect:"Lose 1 victory point", text: "York", nations: "GB"};
+const GB1 = new Space(3, "Move forward one space", "London", "GB");
+const GB2 = new Space(4, "Gain 2 victory points", "Bristol", "GB"); 
+const GB3 = new Space(5, "Lose 1 victory point", "York", "GB"); 
 
 // Russia spaces
-const RUS1 = {id: 6, effect:"Move forward one space", text: "Moscow", nations: "RUS"};
-const RUS2 = {id: 7, effect:"Gain 2 victory points", text: "St. Petersburg", nations: "RUS"};
-const RUS3 = {id: 8, effect:"Lose 1 victory point", text: "Tver", nations: "RUS"};
+const RUS1 = new Space(6, "Move forward one space", "Moscow", "RUS");
+const RUS2 = new Space(7, "Gain 2 victory points", "Petrograd", "RUS");
+const RUS3 = new Space(8, "Lose 1 victory point", "Kiev", "RUS");
 
 // France spaces
-const FR1 = {id: 9, effect:"Move forward one space", text: "Paris", nations: "FR"};
-const FR2 = {id: 10, effect:"Gain 2 victory points", text: "Lyon", nations: "FR"};
-const FR3 = {id: 11, effect:"Lose 1 victory point", text: "Dijon", nations: "FR"};
-*/
+const FR1 = new Space(9, "Move forward one space", "Paris", "FR");
+const FR2 = new Space(10, "Gain 2 victory points", "Lyon", "FR"); 
+const FR3 = new Space(11, "Lose 1 victory point", "Dijon", "FR"); 
+
 const spacesGermany = [DE1, DE2, DE3];
-//const spacesRussia = [RUS1, RUS2, RUS3];
-//const spacesFrance = [FR1, FR2, FR3];
-//const spacesBritain = [GB1, GB2, GB3];
+const spacesRussia = [RUS1, RUS2, RUS3];
+const spacesFrance = [FR1, FR2, FR3];
+const spacesBritain = [GB1, GB2, GB3];
 
 let Spaces = {
     "DE":spacesGermany,
-    // "GB":spacesBritain,
-    //"RUS":spacesRussia,
-  //  "FR":spacesFrance
+    "GB":spacesBritain,
+    "RUS":spacesRussia,
+    "FR":spacesFrance
 }
 export default Spaces;
