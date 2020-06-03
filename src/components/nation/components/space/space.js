@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 //import './space.css';
 
 class Space extends Component {
-    constructor(props, id, effect, text, nation) {
+    constructor(id, effect, text, nation, props) {  // todo: props must come last here, so fix params
         super(props);
         this.id = id;
         this.effect = effect;
@@ -29,7 +29,7 @@ class Space extends Component {
     }
     */
     render() {
-      return(<p> {this.text} </p>);
+      return(<li>{this.props.text}</li>);
    }
        
 };

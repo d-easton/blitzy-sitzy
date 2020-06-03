@@ -40,6 +40,7 @@ class Nation extends Component {
         }
 
         this.spaces = Spaces[this.id]; 
+        console.log("construct nation -- "+ Spaces[this.id][0].effect);
     }
 
     componenetDidMount(){
@@ -72,7 +73,7 @@ class Nation extends Component {
                 <RollButton class={this.id} dieSize={this.dieSize} onClick></RollButton>
                 <DrawButton class={this.id} onclick={this.handleClickRollButton}></DrawButton>
                 <button onClick={this.props.handleUpdateVP}>Change Victory Points</button>
-                <Track spaces={this.spaces.map(x => x.text)}/>
+                <Track spaces={this.spaces}/>
             </div>
         );
     };

@@ -1,3 +1,4 @@
+import React, {Component} from 'react'; 
 import Space from "../../components/nation/components/space";
 
 /*
