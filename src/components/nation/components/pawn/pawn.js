@@ -11,7 +11,7 @@ class Pawn extends Component {
 
     render() {
         return(
-            <div className = "pawnDot" nation = {this.props.ownerNation}></div>
+            <li className = "pawnDot" nation = {this.props.ownerNation}></li>
         );
     };
 };

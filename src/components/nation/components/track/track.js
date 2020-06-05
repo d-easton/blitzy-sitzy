@@ -2,6 +2,7 @@ import React from 'react';
 import './track.css';
 
 import Space from "../space";
+import Pawn from "../pawn";
 
 /*
     The track component render the spaces that constitue each nation's game board. It does so by rendering a 
@@ -15,6 +16,7 @@ const Track = props => {
         effect={item.effect} 
         text={item.text} 
         nation={item.nation}
+        pawnList={item.pawnList}
     />);   
   
     return (
